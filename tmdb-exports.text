@@ -1,0 +1,16 @@
+http://files.tmdb.org
+http://files.tmdb.org/p/exports/movie_ids_05_12_2023.json.gz
+
+http://files.tmdb.org/p/exports/movie_ids_05_12_2023.json.gz
+http://files.tmdb.org/p/exports/tv_series_ids_05_12_2023.json.gz
+http://files.tmdb.org/p/exports/person_ids_05_12_2023.json.gz
+http://files.tmdb.org/p/exports/collection_ids_05_12_2023.json.gz
+http://files.tmdb.org/p/exports/tv_network_ids_05_12_2023.json.gz
+http://files.tmdb.org/p/exports/keyword_ids_05_12_2023.json.gz
+http://files.tmdb.org/p/exports/production_company_ids_05_12_2023.json.gz
+
+http://files.tmdb.org/p/exports/movie_ids_05_10_2023.json.gz
+http://files.tmdb.org/p/exports/tv_series_ids_05_10_2023.json.gz
+
+
+https://api.themoviedb.org/3/genre/movie/list?api_key=c18f3d9ab77879c8a50552c0ccc540c9&language=en-US
