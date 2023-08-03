@@ -11,8 +11,31 @@ datasource db {
 }
 
 model account {
-  id              Int     @id @default(autoincrement())
-  email           String  @unique
+  id              Int           @id @default(autoincrement())
+  email           String        @unique
   password        String
   rememberMeToken String?
+  profiles        profile[]
+  subscription    subscription? @relation(fields: [subscriptionId], references: [id])
+  subscriptionId  Int?
+}
+
+model profile {
+  id        Int      @id @default(autoincrement())
+  name      String
+  account   account? @relation(fields: [accountId], references: [id])
+  accountId Int?
+}
+
+model subscription {
+  id      Int       @id @default(autoincrement())
+  plan    plan      @default(BASIC)
+  account account[]
+}
+
+enum plan {
+  MOBILE
+  BASIC
+  STANDARD
+  PREMIUM
 }

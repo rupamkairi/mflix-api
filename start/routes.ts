@@ -27,6 +27,11 @@ Route.get('/', async () => {
 Route.group(() => {
   Route.post('/signup', 'AuthController.signup').as('signup')
   Route.post('/signin', 'AuthController.signin').as('signin')
+
+  Route.resource('/accounts', 'AccountsController').as('accounts')
 })
   .as('auth')
   .prefix('/auth')
+
+Route.resource('/profiles', 'ProfilesController')
+Route.resource('/subscriptions', 'SubscriptionsController')

@@ -18,8 +18,11 @@ export default class AuthController {
   public async signin({ request, response, auth }: HttpContextContract) {
     const { email, password } = request.only(['email', 'password'])
 
+    console.log(email, password)
+
     const account = await auth.attempt(email, password)
     account.password = undefined
+    account.rememberMeToken = undefined
 
     return response.json(account)
   }
